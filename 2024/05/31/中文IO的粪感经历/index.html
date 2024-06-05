@@ -520,24 +520,24 @@
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = '';
+    var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : ,
-      notify     : ,
+      verify     : false,
+      notify     : false,
       appId      : 'TJEO91BaXT323dE9es9QCNH5-gzGzoHsz',
       appKey     : 'F5hx43tVfDuKVI057VetiiHP',
-      placeholder: "随便说点",
+      placeholder: "Just go go ^_^",
       avatar     : 'retro',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
+      lang       : '' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : true,
+      recordIP   : ,
       serverURLs : ''
     });
   }, window.Valine);

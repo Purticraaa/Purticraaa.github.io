@@ -30,7 +30,7 @@
 <meta property="og:description" content="IB Geography Unit 3 Definitions and Explanations   IB Geography Option B Definitions and Explanations Part 1   IB Geography Option B Definitions and Explanations Part 2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-23T01:00:00.000Z">
-<meta property="article:modified_time" content="2024-06-05T04:11:06.410Z">
+<meta property="article:modified_time" content="2024-06-05T04:54:20.295Z">
 <meta property="article:author" content="Purticra">
 <meta property="article:tag" content="随记 经验记录 资源留档">
 <meta name="twitter:card" content="summary">
@@ -443,24 +443,24 @@
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = '';
+    var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : ,
-      notify     : ,
+      verify     : false,
+      notify     : false,
       appId      : 'TJEO91BaXT323dE9es9QCNH5-gzGzoHsz',
       appKey     : 'F5hx43tVfDuKVI057VetiiHP',
-      placeholder: "随便说点",
+      placeholder: "Just go go ^_^",
       avatar     : 'retro',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
+      lang       : '' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : true,
+      recordIP   : ,
       serverURLs : ''
     });
   }, window.Valine);
